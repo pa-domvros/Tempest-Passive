@@ -1,1 +1,190 @@
+<!DOCTYPE html>
 
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>The Tempest — Passive Voice Conversion Practice</title>
+<style>
+    :root{ --ink:#bbb; --muted:#999; --accent:#72aeff; --bg:#1a1a1a; --card:#222; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.3 } /* Tighter line height */
+    header, footer{ text-align:center; padding:0.8rem } /* Tighter padding */
+    header h1{ margin:.2rem 0 .4rem; font-size:clamp(1.4rem,2.8vw,2rem) } /* Tighter margins */
+    header p{ margin:0; color:var(--muted); font-size:0.95rem } /* Slightly smaller text */
+    .wrap{ max-width:1000px; margin:0 auto; padding:0.8rem } /* Tighter padding */
+
+    .card{ background:var(--card); border:1px solid #333; border-radius:14px; box-shadow:0 1px 3px rgba(0,0,0,.15); margin:0.8rem 0; overflow:hidden; display:grid; grid-template-columns:1fr; align-items:start } /* Tighter margins */
+    @media(min-width:720px){ .card{ grid-template-columns:0.3fr 0.7fr } }
+    .card .media{ width:100%; height:auto; display:block; object-fit:contain; background:#333 }
+    .card .pad{ padding:0.8rem 1rem } /* Tighter padding */
+
+    header.wrap img{ width:100%; max-width:300px; height:auto; border-radius:12px; object-fit:contain; background:#333 }
+
+    h2{ margin:.2rem 0 .5rem; font-size:clamp(1.2rem,2.5vw,1.6rem); color:var(--accent) } /* Tighter margins */
+    .pad p { margin:0 0 .4rem; font-size:0.95rem } /* Tighter spacing, smaller text */
+    .present, .past{ background:#2a2a2a; border:1px dashed #444; border-radius:8px; padding:0.7rem; margin-bottom:.4rem; color:var(--ink); font-size:0.95rem } /* Tighter spacing */
+
+    input.gap{ 
+      display:inline-block; 
+      min-width:6ch; 
+      width:auto;
+      max-width:100%;
+      border:none; 
+      border-bottom:2px solid #777; 
+      padding:.1rem .2rem; /* Tighter padding */
+      margin:0 .1rem; /* Tighter margin */
+      font:inherit; 
+      background:#333; 
+      transition:border-color .3s; 
+      color:inherit;
+      box-sizing:border-box;
+    }
+    .verbs{ font-size:.9rem; color:#88a86a; margin-top:.3rem } /* Tighter spacing */
+    .controls{ display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.5rem } /* Tighter spacing */
+    button{ cursor:pointer; background:var(--accent); color:#fff; border:0; border-radius:6px; padding:.4rem .7rem; font-weight:600; font-size:0.9rem } /* Tighter padding */
+    button.alt{ background:#6c757d }
+    button.submit-btn{ background:#28a745; }
+    .show-answers-btn { display:none; }
+
+    .cast{ columns:2; column-gap:1.5rem } /* Tighter gap */
+    @media(max-width:680px){ .cast{ columns:1 } }
+    .intro-text p, .intro-text ul { color:var(--ink); font-size:0.95rem } /* Smaller text */
+
+    footer{ font-weight:600; font-size:.9rem; color:#888; border-top:1px solid #333; margin-top:1.5rem; padding:0.8rem } /* Tighter spacing */
+  </style>
+</head>
+<body>
+<header class="wrap">
+<img alt="Cover" src="0.jpg"/>
+<h2>The Tempest — Passive Voice Conversion Practice</h2>
+<p><i>Based on William Shakespeare (adapted by Panagiotis Domvros, English & Drama Teacher)</i></p>
+</header>
+<main class="wrap">
+<section class="card">
+<img alt="Illustration 1" class="media" src="1.jpg"/>
+<div class="pad">
+<p>Many years ago, a terrible storm <input class="gap" data-answer="was caused" placeholder="(cause)"/> by a powerful magician named Prospero. A large ship sailing near a mysterious island <input class="gap" data-answer="was struck" placeholder="(strike)"/> by lightning and <input class="gap" data-answer="was thrown" placeholder="(throw)"/> against the waves. The passengers <input class="gap" data-answer="were shaken" placeholder="(shake)"/> with fear as the ship <input class="gap" data-answer="was torn" placeholder="(tear)"/> apart by the wind and the sea. Finally, the vessel <input class="gap" data-answer="was destroyed" placeholder="(destroy)"/>, and the sailors and noblemen <input class="gap" data-answer="were carried" placeholder="(carry)"/> through the water by magic. They <input class="gap" data-answer="were brought" placeholder="(bring)"/> safely to the island, although they believed they had <input class="gap" data-answer="been lost" placeholder="(lose)"/> forever. This storm <input class="gap" data-answer="was not created" placeholder="(not create)"/> by chance. It <input class="gap" data-answer="was planned" placeholder="(plan)"/> carefully by Prospero, who <input class="gap" data-answer="was once" placeholder="(once-be)"/> the rightful Duke of Milan.</p>
+<div class="controls"><button class="submit-btn" onclick="checkAnswers(this)">Submit</button><button class="show-answers-btn" onclick="reveal(this)">Show answers</button><button class="alt" onclick="clearAns(this)">Clear</button></div>
+</div>
+</section>
+<section class="card">
+<img alt="Illustration 2" class="media" src="2.jpg"/>
+<div class="pad">
+<p>Many years earlier, Prospero’s dukedom <input class="gap" data-answer="was taken" placeholder="(take)"/> from him by his ambitious brother, Antonio, with help from the King of Naples. Prospero and his baby daughter <input class="gap" data-answer="were placed" placeholder="(place)"/> in a small, broken boat and <input class="gap" data-answer="were abandoned" placeholder="(abandon)"/> at sea. By fortune, the boat <input class="gap" data-answer="was carried" placeholder="(carry)"/> to this island, where they <input class="gap" data-answer="were given" placeholder="(give)"/> shelter by nature. From that time, Prospero’s life <input class="gap" data-answer="was shaped" placeholder="(shape)"/> by his study of magic, which <input class="gap" data-answer="was learned" placeholder="(learn)"/> from precious books.</p>
+<div class="controls"><button class="submit-btn" onclick="checkAnswers(this)">Submit</button><button class="show-answers-btn" onclick="reveal(this)">Show answers</button><button class="alt" onclick="clearAns(this)">Clear</button></div>
+</div>
+</section>
+<section class="card">
+<img alt="Illustration 3" class="media" src="3.jpg"/>
+<div class="pad">
+<p>On the island, a spirit named Ariel <input class="gap" data-answer="had been trapped" placeholder="(trap)"/> inside a tree for many years. He <input class="gap" data-answer="was freed" placeholder="(free)"/> by Prospero and <input class="gap" data-answer="was promised" placeholder="(promise)"/> his liberty if he obeyed. </p>
+<div class="controls"><button class="submit-btn" onclick="checkAnswers(this)">Submit</button><button class="show-answers-btn" onclick="reveal(this)">Show answers</button><button class="alt" onclick="clearAns(this)">Clear</button></div>
+</div>
+</section>
+<section class="card">
+<img alt="Illustration 4" class="media" src="4.jpg"/>
+<div class="pad">
+<p>A wild creature called Caliban <input class="gap" data-answer="was also found" placeholder="(also find)"/> here; he <input class="gap" data-answer="was taught" placeholder="(teach)"/> to speak and <input class="gap" data-answer="was shown" placeholder="(show)"/> the island’s secrets. However, Caliban later tried to harm Miranda, and as a result, he <input class="gap" data-answer="was forced" placeholder="(force)"/> to work as a servant.</p>
+<div class="controls"><button class="submit-btn" onclick="checkAnswers(this)">Submit</button><button class="show-answers-btn" onclick="reveal(this)">Show answers</button><button class="alt" onclick="clearAns(this)">Clear</button></div>
+</div>
+</section>
+<section class="card">
+<img alt="Illustration 5" class="media" src="5.jpg"/>
+<div class="pad">
+<p>When the shipwreck happened, the King of Naples, his son Ferdinand, Antonio, and other lords <input class="gap" data-answer="were scattered" placeholder="(scatter)"/> in different parts of the island. Some <input class="gap" data-answer="were led" placeholder="(lead)"/> by Ariel’s songs to meet each other, while others <input class="gap" data-answer="were confused" placeholder="(confuse)"/> by illusions. Ferdinand soon <input class="gap" data-answer="was guided" placeholder="(guide)"/> to Prospero’s home, where he <input class="gap" data-answer="was seen" placeholder="(see)"/> by Miranda. Love <input class="gap" data-answer="was felt" placeholder="(feel)"/> instantly between them.</p>
+<div class="controls"><button class="submit-btn" onclick="checkAnswers(this)">Submit</button><button class="show-answers-btn" onclick="reveal(this)">Show answers</button><button class="alt" onclick="clearAns(this)">Clear</button></div>
+</div>
+</section>
+<section class="card">
+<img alt="Illustration 6" class="media" src="6.jpg"/>
+<div class="pad">
+<p>Ferdinand soon <input class="gap" data-answer="was guided" placeholder="(guide)"/> to Prospero’s home, where he <input class="gap" data-answer="was seen" placeholder="(see)"/> by Miranda. Love <input class="gap" data-answer="was felt" placeholder="(feel)"/> instantly between them.</p>
+<div class="controls"><button class="submit-btn" onclick="checkAnswers(this)">Submit</button><button class="show-answers-btn" onclick="reveal(this)">Show answers</button><button class="alt" onclick="clearAns(this)">Clear</button></div>
+</div>
+</section>
+<section class="card">
+<img alt="Illustration 7" class="media" src="7.jpg"/>
+<div class="pad">
+<p>However, Prospero wanted to be sure that Ferdinand’s love <input class="gap" data-answer="was real" placeholder="(real)"/>, so the young man <input class="gap" data-answer="was made" placeholder="(make)"/> to carry heavy logs and <input class="gap" data-answer="was tested" placeholder="(test)"/> through hard work. Elsewhere on the island, Caliban met two drunken sailors, Stephano and Trinculo. A foolish plan <input class="gap" data-answer="was formed" placeholder="(form)"/> to kill Prospero and to rule the island. However, the plot <input class="gap" data-answer="was overheard" placeholder="(overhear)"/> by Ariel and <input class="gap" data-answer="was stopped" placeholder="(stop)"/> before any harm could be done. The three men <input class="gap" data-answer="were punished" placeholder="(punish)"/> by being chased through the forest by magical dogs.</p>
+<div class="controls"><button class="submit-btn" onclick="checkAnswers(this)">Submit</button><button class="show-answers-btn" onclick="reveal(this)">Show answers</button><button class="alt" onclick="clearAns(this)">Clear</button></div>
+</div>
+</section>
+<section class="card">
+<img alt="Illustration 8" class="media" src="8.jpg"/>
+<div class="pad">
+<p>At last, all the survivors of the storm <input class="gap" data-answer="were gathered" placeholder="(gather)"/> together by Prospero’s magic. Antonio’s betrayal <input class="gap" data-answer="was exposed" placeholder="(expose)"/>, and the wrongs done to Prospero <input class="gap" data-answer="were forgiven" placeholder="(forgive)"/>. The King of Naples <input class="gap" data-answer="was reunited" placeholder="(reunite)"/> with his son Ferdinand, and their marriage to Miranda <input class="gap" data-answer="was agreed" placeholder="(agree)"/> upon with joy.</p>
+<div class="controls"><button class="submit-btn" onclick="checkAnswers(this)">Submit</button><button class="show-answers-btn" onclick="reveal(this)">Show answers</button><button class="alt" onclick="clearAns(this)">Clear</button></div>
+</div>
+</section>
+<section class="card">
+<img alt="Illustration 9" class="media" src="9.jpg"/>
+<div class="pad">
+<p>Ariel finally <input class="gap" data-answer="was set" placeholder="(set)"/> free, and Caliban <input class="gap" data-answer="was left" placeholder="(leave)"/> to live on the island alone.</p>
+<div class="controls"><button class="submit-btn" onclick="checkAnswers(this)">Submit</button><button class="show-answers-btn" onclick="reveal(this)">Show answers</button><button class="alt" onclick="clearAns(this)">Clear</button></div>
+</div>
+</section>
+<section class="card">
+<img alt="Illustration 10" class="media" src="10.jpg"/>
+<div class="pad">
+<p>Before leaving, Prospero’s magic books <input class="gap" data-answer="were buried" placeholder="(bury)"/>, and his magical staff <input class="gap" data-answer="was broken" placeholder="(break)"/> so that no more enchantments could be made. The sea <input class="gap" data-answer="was calmed" placeholder="(calm)"/>, and the repaired ship <input class="gap" data-answer="was prepared" placeholder="(prepare)"/> for the journey home. The past <input class="gap" data-answer="was forgiven" placeholder="(forgive)"/>, and a new chapter <input class="gap" data-answer="was begun" placeholder="(begin)"/> for all who had <input class="gap" data-answer="had been touched" placeholder="(touch)"/> by the tempest.</p>
+<div class="controls"><button class="submit-btn" onclick="checkAnswers(this)">Submit</button><button class="show-answers-btn" onclick="reveal(this)">Show answers</button><button class="alt" onclick="clearAns(this)">Clear</button></div>
+</div>
+</section>
+</main>
+<footer>
+    ✨✍️  Panagiotis Domvros, English &amp; Drama Teacher ✍️✨
+  </footer>
+<script>
+    function checkAnswers(btn) {
+      const box = btn.closest('.pad');
+      const inputs = box.querySelectorAll('input.gap');
+      let hasMistake = false;
+
+      inputs.forEach(inp => {
+        const userAnswer = inp.value.trim().toLowerCase().replace(/[\W_]/g, '');
+        const correctAnswer = inp.dataset.answer.toLowerCase().replace(/[\W_]/g, '');
+        
+        const isCorrect = (userAnswer === correctAnswer);
+
+        if (isCorrect) {
+          inp.style.borderColor = 'green';
+        } else {
+          inp.style.borderColor = '#777'; 
+          hasMistake = true;
+        }
+      });
+
+      const showBtn = box.querySelector('.show-answers-btn');
+      if (hasMistake) {
+        showBtn.style.display = 'inline-block';
+      } else {
+        showBtn.style.display = 'none';
+      }
+    }
+
+    function reveal(btn){
+      const box = btn.closest('.pad');
+      box.querySelectorAll('input.gap').forEach(inp => { 
+        inp.value = inp.dataset.answer || '';
+        // Auto-adjust width based on content
+        inp.style.width = 'auto';
+        inp.style.width = (inp.scrollWidth + 2) + 'px';
+        inp.style.borderColor = '#777';
+      });
+      btn.style.display = 'none';
+    }
+
+    function clearAns(btn){
+      const box = btn.closest('.pad');
+      box.querySelectorAll('input.gap').forEach(inp => { 
+        inp.value = '';
+        inp.style.width = '';
+        inp.style.borderColor = '#777';
+      });
+      const showBtn = box.querySelector('.show-answers-btn');
+      showBtn.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
